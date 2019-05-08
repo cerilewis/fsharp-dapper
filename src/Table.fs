@@ -277,7 +277,7 @@ module Table =
                                |> List.ofSeq
             
             for p in _parameters do 
-                command.Parameters.Add(p)
+                command.Parameters.Add(p) |> ignore
 
             let parameters = command.Parameters |> Seq.cast<DbParameter>
 
